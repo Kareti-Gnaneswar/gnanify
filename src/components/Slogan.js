@@ -85,7 +85,7 @@ const Slogan = () => {
                 Welcome to <strong>Gnanify</strong>! 🚀 I teach AI, Machine Learning, GATE Data Science, 
                 and cutting-edge technology concepts to help you master competitive exams and stay ahead in the tech world. 
                 Subscribe to my <a href="https://www.youtube.com/channel/YOUR_CHANNEL_LINK" target="_blank" rel="noopener noreferrer">YouTube channel</a> 
-                for high-quality learning content!
+                for high-quality learning content here!
             </p>
         </div>
     );
