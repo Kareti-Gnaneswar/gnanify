@@ -1,0 +1,63 @@
+.slogan-container {
+    text-align: center;
+    padding: 30px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #222, #121212);
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(255, 255, 0, 0.4);
+    max-width: 85%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.slogan-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(255, 255, 0, 0.5);
+}
+
+.slogan {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 3px 3px 6px rgba(255, 255, 0, 0.6);
+    margin-bottom: 15px;
+}
+
+.slogan-description {
+    font-size: 1.3rem;
+    color: #ddd;
+    line-height: 1.7;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.slogan-description a {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.slogan-description a:hover {
+    color: #ff0;
+    text-shadow: 2px 2px 8px rgba(255, 255, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slogan {
+        font-size: 1.8rem;
+    }
+    .slogan-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan {
+        font-size: 1.5rem;
+    }
+    .slogan-description {
+        font-size: 1rem;
+    }
+}
