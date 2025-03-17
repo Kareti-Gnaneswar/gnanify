@@ -12,12 +12,11 @@ const Founder = () => {
                         className="founder-img"
                     />
                     <div className="founder-info">
-                        <h2>Your Name</h2>
+                        <h2>Gnaneswar Kareti</h2>
                         <h4>Founder, CEO & Lead Educator</h4>
                         <p>
                             Passionate about revolutionizing education through AI and ML, I founded
-                            Gnanify to provide top-quality learning resources and mock tests for
-                            competitive exams.
+                            Gnanify to provide top-quality learning resources In Concepts reated to AI, Ml, Data Science.
                         </p>
                         <p>
                             With expertise in AI, ML, and Data Science, my vision is to create an
