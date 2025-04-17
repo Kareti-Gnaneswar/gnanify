@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-links {
@@ -32,6 +33,20 @@
     color: #00ccff; /* Cyan for hover effect */
 }
 
+/* Hamburger menu icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: #ffcc00;
+}
+
 /* Responsive Navbar */
 @media (max-width: 768px) {
     .navbar {
@@ -40,8 +55,21 @@
         flex-direction: column;
     }
 
+    /* Hide the nav-links by default in mobile view */
     .nav-links {
         flex-direction: column;
         gap: 10px;
+        display: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* When the menu is open, show the links */
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
     }
 }
