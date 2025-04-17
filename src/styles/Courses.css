@@ -1,114 +1,198 @@
-/* Style for the Courses Page */
-.courses-container {
-    background-color: #2a2a2a; /* Deep dark background for a rich feel */
-    color: #fff;
-    padding: 30px;
-    margin-top: 20px;
-    border-radius: 15px;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Soft shadow for a floating effect */
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6fa;
+    color: #333;
 }
 
-.courses-container h2 {
-    text-align: center;
-    color: #f2a900; /* Soft golden yellow for elegance */
-    font-size: 3rem;
-    margin-bottom: 40px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-}
-
-.cards-container {
+/* Course Layout */
+.course-layout {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin: 0 auto;
+    height: 100vh;
 }
 
-.course-card {
-    background-color: #333; /* Slightly lighter background for cards */
-    padding: 25px;
-    border-radius: 15px;
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 1.5rem;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
     text-align: center;
-    width: 280px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-    border: 2px solid #444; /* Add a subtle border for distinction */
-}
-
-.course-card h3 {
-    color: #f2a900; /* Golden color for the title */
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.course-btn {
-    background-color: #007acc; /* Soft blue color for buttons */
-    color: #fff; /* White text for readability */
-    border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
     font-weight: bold;
 }
 
-.course-btn:hover {
-    background-color: #f2a900; /* Hover to golden color */
-    transform: scale(1.05); /* Slight zoom on hover */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.course-card:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for hover */
-    background-color: #444; /* Darker background color for hover effect */
+.sidebar li {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Responsive design for tablets and phones */
+.sidebar li:hover,
+.sidebar li.active {
+    background-color: #2e2e4d;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.sidebar li:active {
+    background-color: #40415a;
+}
+
+/* Course Content Area */
+.course-content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-left: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.course-content h1 {
+    font-size: 2rem;
+    color: #1e1e2f;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Topics */
+.topic {
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.topic:hover {
+    transform: translateY(-5px);
+}
+
+.topic-header {
+    background-color: #313131;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.topic-header:hover {
+    background-color: #4a4a4a;
+    padding-left: 2rem;
+}
+
+.topic-header h3 {
+    margin: 0;
+}
+
+/* Table */
+.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.resource-table th,
+.resource-table td {
+    text-align: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #000000;
+}
+
+.resource-table th {
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Icon Cells */
+.resource-table i {
+    font-size: 1.3rem;
+    color: #1e1e2f;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.resource-table a {
+    text-decoration: none;
+}
+
+.resource-table a:hover i {
+    transform: scale(1.2);
+    color: #1976d2;
+}
+
+/* Subtopic Text */
+.resource-table td:first-child {
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .courses-container {
-        padding: 20px;
+    .course-layout {
+        flex-direction: column;
     }
 
-    .courses-container h2 {
-        font-size: 2.5rem;
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
     }
 
-    .cards-container {
-        justify-content: center; /* Center the cards for small screens */
+    .course-content {
+        padding: 1.5rem;
     }
 
-    .course-card {
-        width: 90%; /* Card takes more width for smaller screens */
-    }
-
-    .course-btn {
+    .sidebar li {
         font-size: 1rem;
-        padding: 10px 15px;
+    }
+
+    .resource-table td,
+    .resource-table th {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .resource-table i {
+        font-size: 1.1rem;
     }
 }
 
-/* Responsive design for mobile devices */
-@media (max-width: 480px) {
-    .courses-container h2 {
-        font-size: 2rem;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
     }
-
-    .course-card {
-        width: 100%; /* Full width on mobile devices */
-        margin-bottom: 20px;
-    }
-
-    .course-btn {
-        width: 100%; /* Button takes full width */
-        padding: 12px 0;
-        font-size: 1.2rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

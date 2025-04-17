@@ -1,0 +1,174 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6fa;
+    color: #333;
+}
+
+.contact-container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Heading */
+.contact-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-heading h2 {
+    font-size: 2.5rem;
+    color: #1e1e2f;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-heading p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Contact Information */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.info-item {
+    flex: 1;
+    margin: 0 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.info-item h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1e1e2f;
+}
+
+.info-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.info-item a {
+    color: #1976d2;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1976d2;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.2);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #004ba0;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}

@@ -72,14 +72,36 @@ const slogans = [
 
 const Slogan = () => {
     const [slogan, setSlogan] = useState("");
+    const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * slogans.length);
         setSlogan(slogans[randomIndex]);
     }, []);
 
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchQuery.trim() !== "") {
+            const query = encodeURIComponent(searchQuery);
+            window.open(`https://www.google.com/search?q=${query}`, "_blank");
+        }
+    };
+
     return (
         <div className="slogan-container">
+            {/* 🔍 Search Bar */}
+            <form onSubmit={handleSearch} className="search-form">
+                <input
+                    type="text"
+                    placeholder="Search anything (e.g., GeeksforGeeks, React JS)..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="search-input"
+                />
+                <button type="submit" className="search-button">Search</button>
+            </form>
+
+            {/* 🎯 Random Slogan */}
             <h2 className="slogan">{slogan}</h2>
             <p className="slogan-description">
                 Welcome to <strong>Gnanify</strong>! 🚀 I teach AI, Machine Learning, GATE Data Science, 
@@ -92,7 +114,3 @@ const Slogan = () => {
 };
 
 export default Slogan;
-
-
-
-

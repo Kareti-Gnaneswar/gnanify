@@ -3,12 +3,12 @@ import "../styles/VideoList.css";
 
 const videoData = [
     {
-        url: "https://www.youtube.com/embed/jvZVnaloiJY",
+        url: "https://www.youtube.com/embed/video_id_3",
         title: "Introduction to Machine Learning",
         description: "Learn the basics of Machine Learning and its applications."
     },
     {
-        url: "https://www.youtube.com/embed/5zvcIQAbACY",
+        url: "https://www.youtube.com/embed/video_id_3",
         title: "Deep Learning Fundamentals",
         description: "A beginner-friendly guide to neural networks and deep learning."
     },
