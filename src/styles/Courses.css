@@ -1,4 +1,4 @@
-/* Global Styles */
+/* ---------------- GLOBAL STYLES ---------------- */
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -6,13 +6,13 @@ body {
     color: #333;
 }
 
-/* Course Layout */
+/* ---------------- LAYOUT ---------------- */
 .course-layout {
     display: flex;
     height: 100vh;
 }
 
-/* Sidebar */
+/* ---------------- SIDEBAR ---------------- */
 .sidebar {
     width: 260px;
     background-color: #1e1e2f;
@@ -59,7 +59,7 @@ body {
     background-color: #40415a;
 }
 
-/* Course Content Area */
+/* ---------------- COURSE CONTENT ---------------- */
 .course-content {
     flex-grow: 1;
     padding: 2rem;
@@ -76,7 +76,7 @@ body {
     font-weight: bold;
 }
 
-/* Topics */
+/* ---------------- TOPICS ---------------- */
 .topic {
     margin-bottom: 2rem;
     border: 1px solid #ddd;
@@ -109,7 +109,7 @@ body {
     margin: 0;
 }
 
-/* Table */
+/* ---------------- TABLE ---------------- */
 .resource-table {
     width: 100%;
     border-collapse: collapse;
@@ -121,6 +121,7 @@ body {
     text-align: center;
     padding: 12px 20px;
     border-bottom: 1px solid #000000;
+    color: #000000 !important; /* Ensure all text is black */
 }
 
 .resource-table th {
@@ -130,15 +131,22 @@ body {
     color: #000000;
 }
 
-/* Icon Cells */
-.resource-table i {
-    font-size: 1.3rem;
-    color: #1e1e2f;
-    transition: transform 0.3s ease, color 0.3s ease;
+/* Subtopic text also black (first column) */
+.resource-table td:first-child {
+    text-align: left;
+    font-size: 1rem;
+    color: #000000 !important;
 }
 
+/* ---------------- ICONS ---------------- */
 .resource-table a {
     text-decoration: none;
+}
+
+.resource-table i {
+    font-size: 1.5rem;
+    color: #1e1e2f;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .resource-table a:hover i {
@@ -146,14 +154,7 @@ body {
     color: #1976d2;
 }
 
-/* Subtopic Text */
-.resource-table td:first-child {
-    text-align: left;
-    font-size: 1rem;
-    color: #333;
-}
-
-/* Responsive Design */
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
     .course-layout {
         flex-direction: column;
@@ -185,7 +186,7 @@ body {
     }
 }
 
-/* Animations */
+/* ---------------- ANIMATIONS ---------------- */
 @keyframes fadeIn {
     from {
         opacity: 0;

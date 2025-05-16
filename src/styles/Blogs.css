@@ -1,67 +1,157 @@
-.blogs-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-}
-
-.blogs-container h2 {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    color: #222;
-    text-align: center;
-    position: relative;
-}
-
-.blog-list {
+/* General Styles */
+.navbar {
+    background-color: #333;  /* Darker navbar for better contrast */
+    color: #fff;
+    padding: 1rem 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Added shadow for depth */
 }
 
-.blog-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.navItem {
     cursor: pointer;
-    border-left: 5px solid #1976d2;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: transparent;
+    font-weight: normal;
+    color: #ccc;  /* Lighter text color */
+    white-space: nowrap;
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
 }
 
-.blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+.navItem:hover {
+    background-color: #555;  /* Hover effect */
+    color: #fff;  /* On hover, text will be white */
 }
 
-.blog-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    color: #1976d2;
+.navItem.active {
+    background-color: #1976d2;  /* Brighter blue for active item */
+    font-weight: bold;
+    color: #fff;
 }
 
-.blog-card p {
+/* Main container */
+.container {
+    display: flex;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f9f9f9;  /* Light background for main container */
+    min-height: 100vh;
+}
+
+/* Left Sidebar */
+.leftSidebar {
+    width: 250px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);  /* Added shadow for depth */
+}
+
+.subtopic {
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    color: #444;  /* Darker text color for subtopics */
+    border-radius: 4px;
+    margin: 0.4rem 0;
+    transition: all 0.3s ease;
+}
+
+.subtopic:hover {
+    background-color: #e3f2fd;  /* Light blue hover background */
+    color: #1976d2;  /* Blue text color on hover */
+}
+
+.subtopic.active {
+    background-color: #1976d2;  /* Active subtopic color */
+    color: #fff;
+}
+
+/* Tag List */
+.tagList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tagItem {
+    cursor: pointer;
+    padding: 0.7rem;
+    background-color: #388e3c;  /* Green background for tags */
+    border-radius: 4px;
     margin: 0.5rem 0;
-    color: #555;
-    line-height: 1.6;
+    transition: all 0.3s ease;
 }
 
-.blog-card strong {
-    color: #333;
+.tagItem:hover {
+    background-color: #4caf50;  /* Lighter green on hover */
 }
 
-.read-more {
+.tagItem.active {
+    background-color: #1976d2;  /* Blue when active */
+    color: #fff;
+}
+
+/* Content Area */
+.contentArea {
+    flex: 1;
+    padding: 2rem;
+    background-color: #fff;  /* White background for content area */
+}
+
+.contentBox {
+    background-color: #fff;
+    padding: 1.5rem;
     margin-top: 1rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #1976d2;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow for boxes */
 }
 
-.read-more:hover {
-    background-color: #125aa5;
+.blogCard {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Soft shadow */
+    transition: all 0.3s ease;  /* Smooth transition on hover */
+}
+
+.blogCard:hover {
+    background-color: #f1f1f1;  /* Light hover effect for blog cards */
+}
+
+.blogTitle {
+    font-size: 1.5rem;
+    color: #1976d2;  /* Bright blue for titles */
+    transition: color 0.3s ease;
+}
+
+.blogTitle:hover {
+    color: #1565c0;  /* Darker blue when hovering over title */
+}
+
+/* Right Sidebar */
+.rightSidebar {
+    width: 250px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    padding: 1.5rem;
+    overflow-y: auto;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);  /* Shadow on the left side */
+}
+
+.recentPost {
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.recentPost:hover {
+    color: #1976d2;  /* Highlight text on hover */
 }

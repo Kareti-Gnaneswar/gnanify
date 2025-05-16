@@ -73,3 +73,62 @@
         display: flex; /* Show hamburger on small screens */
     }
 }
+
+
+
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Centered overlay */
+.profile-card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+/* Centered profile card */
+.profile-card {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    min-width: 250px;
+    text-align: center;
+}
+
+.profile-card h3 {
+    margin-bottom: 10px;
+}
+
+.profile-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.logout-btn {
+    margin-top: 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #e60000;
+}
